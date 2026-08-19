@@ -1,5 +1,21 @@
-node_modules
-.git
-.vercel
-package-lock.json
-wrangler.jsonc
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "gyeonggi-mong",
+  "compatibility_date": "2026-08-19",
+  "observability": {
+    "enabled": true
+  },
+  "assets": {
+    "directory": ".",
+    "exclude": [
+      "node_modules/**",
+      ".git/**",
+      ".github/**",
+      "package.json",
+      "package-lock.json",
+      "build.js",
+      "*.jsonc",
+      "*.md"
+    ]
+  }
+}
