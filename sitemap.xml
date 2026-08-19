@@ -3,70 +3,196 @@
 
   <!-- 메인 홈 페이지 -->
   <url>
-    <loc>https://gg-gunmalove.shop/</loc>
-    <lastmod>2026-08-13</lastmod>
+    <loc>https://gyeonggi-mong.massagemong-kr.workers.dev/</loc>
+    <lastmod>2026-08-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- 경기 주요 31개 시/군 지역 URL (올바른 경로 방식) -->
+  <!-- 경기 31개 시/군 지역 URL -->
   <url>
-    <loc>https://gg-gunmalove.shop/suwon</loc>
-    <lastmod>2026-08-13</lastmod>
+    <loc>https://gyeonggi-mong.massagemong-kr.workers.dev/suwon</loc>
+    <lastmod>2026-08-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://gg-gunmalove.shop/seongnam</loc>
-    <lastmod>2026-08-13</lastmod>
+    <loc>https://gyeonggi-mong.massagemong-kr.workers.dev/seongnam</loc>
+    <lastmod>2026-08-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://gg-gunmalove.shop/goyang</loc>
-    <lastmod>2026-08-13</lastmod>
+    <loc>https://gyeonggi-mong.massagemong-kr.workers.dev/goyang</loc>
+    <lastmod>2026-08-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://gg-gunmalove.shop/yongin</loc>
-    <lastmod>2026-08-13</lastmod>
+    <loc>https://gyeonggi-mong.massagemong-kr.workers.dev/yongin</loc>
+    <lastmod>2026-08-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://gg-gunmalove.shop/bucheon</loc>
-    <lastmod>2026-08-13</lastmod>
+    <loc>https://gyeonggi-mong.massagemong-kr.workers.dev/bucheon</loc>
+    <lastmod>2026-08-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://gg-gunmalove.shop/ansan</loc>
-    <lastmod>2026-08-13</lastmod>
+    <loc>https://gyeonggi-mong.massagemong-kr.workers.dev/ansan</loc>
+    <lastmod>2026-08-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://gg-gunmalove.shop/anyang</loc>
-    <lastmod>2026-08-13</lastmod>
+    <loc>https://gyeonggi-mong.massagemong-kr.workers.dev/anyang</loc>
+    <lastmod>2026-08-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://gg-gunmalove.shop/namyangju</loc>
-    <lastmod>2026-08-13</lastmod>
+    <loc>https://gyeonggi-mong.massagemong-kr.workers.dev/namyangju</loc>
+    <lastmod>2026-08-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://gg-gunmalove.shop/hwaseong</loc>
-    <lastmod>2026-08-13</lastmod>
+    <loc>https://gyeonggi-mong.massagemong-kr.workers.dev/hwaseong</loc>
+    <lastmod>2026-08-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://gg-gunmalove.shop/pyeongtaek</loc>
-    <lastmod>2026-08-13</lastmod>
+    <loc>https://gyeonggi-mong.massagemong-kr.workers.dev/pyeongtaek</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gyeonggi-mong.massagemong-kr.workers.dev/uijeongbu</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gyeonggi-mong.massagemong-kr.workers.dev/siheung</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gyeonggi-mong.massagemong-kr.workers.dev/paju</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gyeonggi-mong.massagemong-kr.workers.dev/gimpo</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gyeonggi-mong.massagemong-kr.workers.dev/gwangmyeong</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gyeonggi-mong.massagemong-kr.workers.dev/gwangju</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gyeonggi-mong.massagemong-kr.workers.dev/gunpo</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gyeonggi-mong.massagemong-kr.workers.dev/icheon</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gyeonggi-mong.massagemong-kr.workers.dev/yangju</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gyeonggi-mong.massagemong-kr.workers.dev/osan</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gyeonggi-mong.massagemong-kr.workers.dev/guri</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gyeonggi-mong.massagemong-kr.workers.dev/anseong</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gyeonggi-mong.massagemong-kr.workers.dev/pocheon</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gyeonggi-mong.massagemong-kr.workers.dev/uiwang</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gyeonggi-mong.massagemong-kr.workers.dev/hanam</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gyeonggi-mong.massagemong-kr.workers.dev/yeoju</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gyeonggi-mong.massagemong-kr.workers.dev/yangpyeong</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gyeonggi-mong.massagemong-kr.workers.dev/dongducheon</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gyeonggi-mong.massagemong-kr.workers.dev/gwacheon</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gyeonggi-mong.massagemong-kr.workers.dev/gapyeong</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gyeonggi-mong.massagemong-kr.workers.dev/yeoncheon</loc>
+    <lastmod>2026-08-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
