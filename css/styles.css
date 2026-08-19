@@ -23,11 +23,19 @@ a { color: inherit; text-decoration: none; }
 .nav-menu a { font-size: 0.95rem; font-weight: bold; color: #ddd; transition: color 0.2s; }
 .nav-menu a:hover { color: #ff3366; }
 
-/* Hero */
-.hero-banner { padding: 40px 0 20px; text-align: center; }
+/* Hero Banner (massage-06.jpg 배경 이미지 적용) */
+.hero-banner {
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.75)), 
+              url('/images/thumbs/massage-06.jpg') no-repeat center center / cover;
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: 12px;
+  margin-top: 20px;
+}
 .eyebrow { color: #ff3366; font-size: 0.85rem; font-weight: bold; letter-spacing: 2px; }
-.hero-banner h1 { font-size: 2rem; margin: 10px 0; }
-.hero-banner p { color: #aaa; font-size: 0.95rem; }
+.hero-banner h1 { font-size: 2rem; margin: 10px 0; color: #fff; }
+.hero-banner p { color: #ddd; font-size: 0.95rem; max-width: 700px; margin: 0 auto; }
 
 /* Section Header */
 .section-head { text-align: center; margin: 50px 0 25px; }
@@ -64,7 +72,9 @@ a { color: inherit; text-decoration: none; }
 .shop-call-btn {
   display: block; text-align: center; background: #ff3366;
   color: #fff; font-weight: bold; padding: 12px; border-radius: 6px;
+  transition: background 0.2s;
 }
+.shop-call-btn:hover { background: #e02857; }
 
 /* Info Sections */
 .card-grid {
@@ -100,6 +110,18 @@ a { color: inherit; text-decoration: none; }
 .tile-body { padding: 12px; }
 .tile-body strong { display: block; font-size: 1rem; }
 .tile-tag { font-size: 0.85rem; color: #aaa; }
+
+/* Review Section */
+.review-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px;
+}
+.review-card {
+  background: #1e1e1e; border: 1px solid #2a2a2a; border-radius: 8px; padding: 20px;
+  display: flex; flex-direction: column; justify-content: space-between;
+}
+.review-stars { font-size: 0.9rem; margin-bottom: 10px; }
+.review-text { font-size: 0.9rem; color: #ccc; margin-bottom: 12px; line-height: 1.5; }
+.review-user { font-size: 0.8rem; color: #888; text-align: right; }
 
 /* Detail Page Custom Styles */
 .detail-page-container { padding: 30px 0; max-width: 1000px; margin: 0 auto; }
