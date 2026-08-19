@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://gyeonggi-mong.massagemong-kr.workers.devsitemap.xml
+Sitemap: https://gyeonggi-mong.massagemong-kr.workers.dev/sitemap.xml
