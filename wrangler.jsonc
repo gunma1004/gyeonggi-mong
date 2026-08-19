@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "gyeonggi-gunmamong",
+  "name": "gyeonggi-mong",
   "compatibility_date": "2026-08-19",
   "observability": {
     "enabled": true
