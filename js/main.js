@@ -698,63 +698,99 @@ const areasData = [
    2. 추천 제휴업체 5개 HTML 생성기
    ========================================================================== */
 const sampleShops = [
-  { name: "VIP 시그니처 1인샵", tag: "스웨디시 · 림프관리", score: "4.9", price: "90,000원~", img: "/images/shop1.jpg" },
-  { name: "로얄 힐링 테라피", tag: "감성 스웨디시 · 아로마", score: "4.8", price: "80,000원~", img: "/images/shop2.jpg" },
-  { name: "더프리미엄 바디케어", tag: "1인 단독룸 · 호텔식", score: "5.0", price: "100,000원~", img: "/images/shop3.jpg" },
-  { name: "힐링포레스트", tag: "딥티슈 · 통증집중케어", score: "4.9", price: "70,000원~", img: "/images/shop4.jpg" },
-  { name: "더블랙 에스테틱", tag: "스페셜 1:1 맞춤 코스", score: "4.8", price: "90,000원~", img: "/images/shop5.jpg" }
+  {
+    badge: "BEST",
+    title: "VIP 시그니처 1인샵",
+    desc: "프라이빗 1인 전용 공간에서 누리는 감성 스웨디시 & 림프 순환 케어",
+    courses: [
+      { name: "A코스 (60분)", price: "90,000원" },
+      { name: "B코스 (90분)", price: "120,000원" }
+    ],
+    tel: "0507-1280-3344"
+  },
+  {
+    badge: "HOT",
+    title: "로얄 힐링 테라피",
+    desc: "숙련된 한국인 전문 관리사의 부드러운 스웨디시 & 아로마 릴렉싱",
+    courses: [
+      { name: "스웨디시 (60분)", price: "80,000원" },
+      { name: "스페셜 (90분)", price: "110,000원" }
+    ],
+    tel: "0507-1280-3344"
+  },
+  {
+    badge: "PREMIUM",
+    title: "더프리미엄 바디케어",
+    desc: "호텔식 단독 프라이빗룸, 철저한 위생 관리와 맞춤 바디 테라피",
+    courses: [
+      { name: "딥티슈 (60분)", price: "100,000원" },
+      { name: "VIP 힐링 (90분)", price: "130,000원" }
+    ],
+    tel: "0507-1280-3344"
+  },
+  {
+    badge: "추천",
+    title: "힐링포레스트",
+    desc: "지친 일상의 스트레스를 날려주는 감성 테라피 & 로미로미 케어",
+    courses: [
+      { name: "힐링 A (60분)", price: "70,000원" },
+      { name: "힐링 B (90분)", price: "100,000원" }
+    ],
+    tel: "0507-1280-3344"
+  },
+  {
+    badge: "인기",
+    title: "더블랙 에스테틱",
+    desc: "체계적인 프로그램과 프리미엄 오일을 활용한 1:1 집중 관리",
+    courses: [
+      { name: "베이직 (60분)", price: "90,000원" },
+      { name: "스페셜 VIP (90분)", price: "120,000원" }
+    ],
+    tel: "0507-1280-3344"
+  }
 ];
 
 function getShopsHtml() {
   return sampleShops.map(s => `
     <div class="shop-card">
-      <img src="${s.img}" alt="${s.name}" class="shop-img" onerror="this.src='/images/massage-06.jpg'"/>
-      <div class="shop-content">
-        <span class="shop-tag">${s.tag}</span>
-        <h3 class="shop-title">${s.name}</h3>
-        <div class="shop-meta">
-          <span class="shop-rating">⭐ ${s.score}</span>
-          <span class="shop-price">${s.price}</span>
+      <div>
+        <div class="shop-header">
+          <span class="shop-badge">${s.badge}</span>
+          <h3 class="shop-title">${s.title}</h3>
+        </div>
+        <p class="shop-desc">${s.desc}</p>
+        <div class="shop-courses">
+          ${s.courses.map(c => `
+            <div class="course-item">
+              <span>${c.name}</span>
+              <span class="course-price">${c.price}</span>
+            </div>
+          `).join("")}
         </div>
       </div>
+      <a href="tel:${s.tel.replace(/-/g, '')}" class="shop-call-btn">예약 및 제휴문의</a>
     </div>
   `).join("");
 }
 
 /* ==========================================================================
-   3. 메인 화면 및 세부 페이지 렌더링 / 라우팅 제어
+   3. 메인 화면 및 세부 페이지 라우팅 제어
    ========================================================================== */
 
-// 메인 31개 시군 카드 생성
-function renderMainPage() {
-  // 1) 추천 샵 렌더링
+// 메인 화면 초기화 (추천 샵만 렌더링)
+function initMainPage() {
   const shopContainer = document.getElementById("shopGridContainer");
   if (shopContainer) {
     shopContainer.innerHTML = getShopsHtml();
-  }
-
-  // 2) 31개 시군 그리드 렌더링
-  const areaContainer = document.getElementById("areaGridContainer");
-  if (areaContainer) {
-    areaContainer.innerHTML = areasData.map(area => {
-      // 총 하위 동 개수 계산
-      const dongCount = area.gus.reduce((sum, g) => sum + g.dongs.length, 0);
-      return `
-        <div class="area-card" onclick="selectArea('${area.slug}')">
-          <div class="area-card-inner">
-            <h3 class="area-card-title">${area.name}</h3>
-            <p class="area-card-desc">1인샵 · 스웨디시 (${dongCount}개 구·동)</p>
-          </div>
-        </div>
-      `;
-    }).join("");
   }
 }
 
 // 메인 화면 표시
 function showMainPage() {
-  document.getElementById("mainView").style.display = "block";
-  document.getElementById("detailView").style.display = "none";
+  const mainView = document.getElementById("mainView");
+  const detailView = document.getElementById("detailView");
+  if (mainView) mainView.style.display = "block";
+  if (detailView) detailView.style.display = "none";
 
   const mainTitle = "경기건마몽 - 경기 1인샵 & 건마·스웨디시 31개 시군 안내";
   const mainDesc = "경기건마몽 경기 전지역 1인샵, 건마, 스웨디시, 타이 힐링 제휴 및 구·동별 맞춤 정보.";
@@ -789,11 +825,14 @@ function selectArea(slug) {
   }
 }
 
-// [시 - 구 - 동] 세부 페이지 영역 렌더링
+// 세부 페이지 동적 렌더링
 function showDetailPage(area, guName, dongName) {
-  document.getElementById("mainView").style.display = "none";
+  const mainView = document.getElementById("mainView");
   const detailView = document.getElementById("detailView");
   const detailContent = document.getElementById("detailContent");
+
+  if (mainView) mainView.style.display = "none";
+  if (detailView) detailView.style.display = "block";
 
   let cityName = area.name;
   let pageTitle = `${cityName} 건마 & 1인샵 스웨디시 안내`;
@@ -829,18 +868,16 @@ function showDetailPage(area, guName, dongName) {
   const ogUrl = document.querySelector('meta[property="og:url"]');
   if (ogUrl) ogUrl.setAttribute("content", currentUrl);
 
+  // 구/동 하위 링크 목록 생성
   let subNavHtml = "";
   area.gus.forEach(gu => {
     subNavHtml += `
-      <div class="gu-box" style="margin-bottom: 25px;">
-        <h4 class="gu-title" style="color:#ff3366; font-size:1.1rem; margin-bottom:10px;">${gu.name}</h4>
-        <div class="dong-link-grid" style="display:flex; flex-wrap:wrap; gap:8px;">
+      <div class="gu-box">
+        <h4 class="gu-title">${gu.name}</h4>
+        <div class="dong-link-grid">
           ${gu.dongs.map(d => `
-            <a href="javascript:void(0)" 
-               onclick="selectDong('${area.slug}', '${gu.name}', '${d.name}')" 
-               class="dong-link-btn"
-               style="padding:6px 12px; background:#222; border:1px solid #444; color:#fff; border-radius:4px; text-decoration:none; font-size:0.9rem;">
-               ${d.name}
+            <a href="javascript:void(0)" onclick="selectDong('${area.slug}', '${gu.name}', '${d.name}')" class="dong-link-btn">
+              ${d.name}
             </a>
           `).join("")}
         </div>
@@ -849,47 +886,43 @@ function showDetailPage(area, guName, dongName) {
   });
 
   detailContent.innerHTML = `
-    <!-- 1. 구/동 전용 상단 네비게이션 -->
-    <div class="detail-nav-menu" style="margin-bottom:20px; display:flex; gap:15px; flex-wrap:wrap;">
-      <a href="#service" onclick="goBackToMain(event)">서비스</a>
-      <a href="#price-info" onclick="goBackToMain(event)">가격안내</a>
-      <a href="#travel" onclick="goBackToMain(event)">근처여행</a>
-      <a href="#food" onclick="goBackToMain(event)">맛집숙소</a>
-      <a href="#areas" onclick="goBackToMain(event)">지역안내</a>
-      <a href="#reviews" onclick="goBackToMain(event)">후기</a>
+    <div class="detail-nav-menu">
+      <a href="#shops" onclick="navigateSection(event, 'shops')">추천업체</a>
+      <a href="#service" onclick="navigateSection(event, 'service')">서비스</a>
+      <a href="#price-info" onclick="navigateSection(event, 'price-info')">가격안내</a>
+      <a href="#travel" onclick="navigateSection(event, 'travel')">근처여행</a>
+      <a href="#food" onclick="navigateSection(event, 'food')">맛집숙소</a>
+      <a href="#areas" onclick="navigateSection(event, 'areas')">지역안내</a>
+      <a href="#reviews" onclick="navigateSection(event, 'reviews')">후기</a>
     </div>
 
-    <!-- 2. 구/동 전용 히어로 헤더 -->
-    <div class="detail-hero" style="margin-bottom:30px;">
-      <img src="${area.img}" alt="${pageTitle}" class="detail-hero-img" style="width:100%; max-height:300px; object-fit:cover; border-radius:8px; margin-bottom:15px;"/>
+    <div class="detail-hero">
+      <img src="${area.img}" alt="${pageTitle}" class="detail-hero-img"/>
       <div class="detail-hero-text">
-        <span class="eyebrow" style="color:#ff3366; font-weight:bold;">GYEONGGI LOCAL SERVICE</span>
-        <h1 style="font-size:1.8rem; margin:10px 0;">${pageTitle}</h1>
-        <p style="color:#ccc;">해당 권역 검증된 1:1 맞춤형 힐링 케어를 안내해 드립니다.</p>
+        <span class="eyebrow">GYEONGGI LOCAL SERVICE</span>
+        <h1>${pageTitle}</h1>
+        <p>해당 권역 검증된 1:1 맞춤형 힐링 케어를 안내해 드립니다.</p>
       </div>
     </div>
 
-    <!-- 3. 제휴업체 5개 전용 카드 배치 -->
-    <div class="detail-section" style="margin-bottom:35px;">
-      <h3 style="color:#ff3366; margin-bottom:15px;">🔥 ${pageTitle} 추천 제휴업체</h3>
+    <div class="detail-section">
+      <h3>🔥 ${pageTitle} 추천 제휴업체</h3>
       <div class="shop-grid">
         ${getShopsHtml()}
       </div>
     </div>
 
-    <!-- 4. 하위 구 및 동 지역 선택 네비게이션 -->
     <div class="detail-section">
-      <h3 style="margin-bottom:8px;">📍 ${cityName} 세부 구/동 지역 선택</h3>
-      <p style="color:#aaa; font-size:0.9rem; margin-bottom:15px;">원하시는 동을 클릭하시면 해당 동 전용 1인샵 &amp; 건마 안내 페이지로 즉시 전환됩니다.</p>
+      <h3>📍 ${cityName} 세부 구/동 지역 선택</h3>
+      <p style="color:#aaa; font-size:0.9rem; margin-bottom:15px;">원하시는 동을 클릭하시면 해당 동 전용 1인샵 &amp; 건마 안내 페이지로 이동합니다.</p>
       ${subNavHtml}
     </div>
   `;
 
-  detailView.style.display = "block";
   window.scrollTo(0, 0);
 }
 
-// 세부 동 클릭 시 동작
+// 동 링크 클릭 시 동작
 function selectDong(areaSlug, guName, dongName) {
   const area = areasData.find(a => a.slug === areaSlug);
   if (area) {
@@ -903,7 +936,7 @@ function goBackToMain(e) {
   showMainPage();
 }
 
-// 헤더 네비게이션 앵커 스크롤 이동
+// 상단 네비게이션 스크롤 이동
 function navigateSection(e, sectionId) {
   if (e) e.preventDefault();
   showMainPage();
@@ -919,6 +952,6 @@ function navigateSection(e, sectionId) {
    4. 페이지 최초 실행
    ========================================================================== */
 document.addEventListener("DOMContentLoaded", () => {
-  renderMainPage();
+  initMainPage();
   showMainPage();
 });
