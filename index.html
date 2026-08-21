@@ -1,23 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
 <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1" name="viewport"/>
   
   <title>경기건마몽 - 경기 1인샵 &amp; 건마·스웨디시 31개 시군 안내</title>
   
-  <!-- 공백 포함 58자 (네이버 80자 기준 완벽 충족) -->
+  <!-- SEO 최적화 메타 태그 -->
   <meta name="description" content="경기건마몽 경기 전지역 1인샵, 건마, 스웨디시, 타이 힐링 제휴 및 구·동별 맞춤 정보."/>
-  <meta name="robots" content="index, follow" />
+  <meta name="robots" content="index, follow"/>
 
-  <meta name="naver-site-verification" content="9ab7db161f5250515afbfbc26bee8f9c68d398bb" />
-  <meta name="google-site-verification" content="pB6wowanpCD2l1ulq8hBHrzRSYObbn6N6JaMWMhfZpc" />
+  <meta name="naver-site-verification" content="9ab7db161f5250515afbfbc26bee8f9c68d398bb"/>
+  <meta name="google-site-verification" content="pB6wowanpCD2l1ulq8hBHrzRSYObbn6N6JaMWMhfZpc"/>
 
-  <!-- 공백 포함 58자 (네이버 80자 기준 완벽 충족) -->
+  <!-- 오픈 그래프 (SNS 공유) -->
   <meta property="og:type" content="website"/>
   <meta property="og:url" content="https://gyeonggi-mong.massagemong-kr.workers.dev/"/>
   <meta property="og:title" content="경기건마몽 - 경기 1인샵 &amp; 건마·스웨디시 31개 시군 안내"/>
   <meta property="og:description" content="경기건마몽 경기 전지역 1인샵, 건마, 스웨디시, 타이 힐링 제휴 및 구·동별 맞춤 정보."/>
   <meta property="og:image" content="https://gyeonggi-mong.massagemong-kr.workers.dev/images/logo.png"/>
 
+  <!-- 폰트 및 스타일시트 -->
   <link rel="icon" href="/images/logo.png" type="image/png"/>
   <link href="https://fonts.googleapis.com" rel="preconnect"/>
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -29,21 +32,21 @@
   <div class="page-shell">
     <!-- Header & Navigation -->
     <header class="site-header">
-      <a aria-label="경기건마몽 홈" class="brand" href="/">
+      <a aria-label="경기건마몽 홈" class="brand" href="/" onclick="goBackToMain(event)">
         <span class="brand-text"><strong>경기건마몽</strong><em>GYEONGGI GUNMAMONG</em></span>
       </a>
       <nav class="nav-menu">
-        <a href="/#shops" onclick="navigateSection(event, 'shops')">추천업체</a>
-        <a href="/#service" onclick="navigateSection(event, 'service')">서비스</a>
-        <a href="/#price-info" onclick="navigateSection(event, 'price-info')">가격안내</a>
-        <a href="/#travel" onclick="navigateSection(event, 'travel')">근처여행</a>
-        <a href="/#food" onclick="navigateSection(event, 'food')">맛집숙소</a>
-        <a href="/#areas" onclick="navigateSection(event, 'areas')">지역안내</a>
-        <a href="/#reviews" onclick="navigateSection(event, 'reviews')">후기</a>
+        <a href="#shops" onclick="navigateSection(event, 'shops')">추천업체</a>
+        <a href="#service" onclick="navigateSection(event, 'service')">서비스</a>
+        <a href="#price-info" onclick="navigateSection(event, 'price-info')">가격안내</a>
+        <a href="#travel" onclick="navigateSection(event, 'travel')">근처여행</a>
+        <a href="#food" onclick="navigateSection(event, 'food')">맛집숙소</a>
+        <a href="#areas" onclick="navigateSection(event, 'areas')">지역안내</a>
+        <a href="#reviews" onclick="navigateSection(event, 'reviews')">후기</a>
       </nav>
     </header>
 
-    <!-- [A] 메인 홈 화면 영역 (출장 키워드 제외) -->
+    <!-- [A] 메인 홈 화면 영역 -->
     <div id="mainView">
       <main class="area-hub-page">
         <!-- Hero Banner -->
